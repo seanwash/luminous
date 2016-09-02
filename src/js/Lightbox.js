@@ -124,7 +124,8 @@ export default class Lightbox {
     let captionAttr = this.settings.captionAttribute;
     let caption = this.currentTrigger.getAttribute(captionAttr);
     if (captionAttr && caption) {
-      this.captionEl.innerText = caption;
+      // this.captionEl.innerText = caption;
+      this.captionEl.innerHTML = caption;
     }
   }
 

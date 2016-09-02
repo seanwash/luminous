@@ -202,7 +202,8 @@ var Lightbox = function () {
       var captionAttr = this.settings.captionAttribute;
       var caption = this.currentTrigger.getAttribute(captionAttr);
       if (captionAttr && caption) {
-        this.captionEl.innerText = caption;
+        // this.captionEl.innerText = caption;
+        this.captionEl.innerHTML = caption;
       }
     }
   }, {
@@ -325,65 +326,32 @@ module.exports = (_temp = _class = function () {
     // Based on the pattern here:
     // https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch2.md#nested-defaults-destructured-and-restructured
     var _options$namespace = options.namespace;
-    var
-    // Prefix for generated element class names (e.g. `my-ns` will
-    // result in classes such as `my-ns-lightbox`. Default `lum-`
-    // prefixed classes will always be added as well.
-    namespace = _options$namespace === undefined ? null : _options$namespace;
+    var namespace = _options$namespace === undefined ? null : _options$namespace;
     var _options$sourceAttrib = options.sourceAttribute;
-    var
-    // Which attribute to pull the lightbox image source from.
-    sourceAttribute = _options$sourceAttrib === undefined ? 'href' : _options$sourceAttrib;
+    var sourceAttribute = _options$sourceAttrib === undefined ? 'href' : _options$sourceAttrib;
     var _options$captionAttri = options.captionAttribute;
-    var
-    // Which attribute to pull the caption from, if any.
-    captionAttribute = _options$captionAttri === undefined ? null : _options$captionAttri;
+    var captionAttribute = _options$captionAttri === undefined ? null : _options$captionAttri;
     var _options$openTrigger = options.openTrigger;
-    var
-    // The event to listen to on the _trigger_ element: triggers opening.
-    openTrigger = _options$openTrigger === undefined ? 'click' : _options$openTrigger;
+    var openTrigger = _options$openTrigger === undefined ? 'click' : _options$openTrigger;
     var _options$closeTrigger = options.closeTrigger;
-    var
-    // The event to listen to on the _lightbox_ element: triggers closing.
-    closeTrigger = _options$closeTrigger === undefined ? 'click' : _options$closeTrigger;
+    var closeTrigger = _options$closeTrigger === undefined ? 'click' : _options$closeTrigger;
     var _options$closeWithEsc = options.closeWithEscape;
-    var
-    // Allow closing by pressing escape.
-    closeWithEscape = _options$closeWithEsc === undefined ? true : _options$closeWithEsc;
+    var closeWithEscape = _options$closeWithEsc === undefined ? true : _options$closeWithEsc;
     var _options$closeOnScrol = options.closeOnScroll;
-    var
-    // Automatically close when the page is scrolled.
-    closeOnScroll = _options$closeOnScrol === undefined ? false : _options$closeOnScrol;
+    var closeOnScroll = _options$closeOnScrol === undefined ? false : _options$closeOnScrol;
     var _options$appendToSele = options.appendToSelector;
-    var
-    // A selector defining what to append the lightbox element to.
-    appendToSelector = _options$appendToSele === undefined ? 'body' : _options$appendToSele;
+    var appendToSelector = _options$appendToSele === undefined ? 'body' : _options$appendToSele;
     var _options$onOpen = options.onOpen;
-    var
-    // If present (and a function), this will be called
-    // whenever the lightbox is opened.
-    onOpen = _options$onOpen === undefined ? null : _options$onOpen;
+    var onOpen = _options$onOpen === undefined ? null : _options$onOpen;
     var _options$onClose = options.onClose;
-    var
-    // If present (and a function), this will be called
-    // whenever the lightbox is closed.
-    onClose = _options$onClose === undefined ? null : _options$onClose;
+    var onClose = _options$onClose === undefined ? null : _options$onClose;
     var _options$includeImgix = options.includeImgixJSClass;
-    var
-    // When true, adds the `imgix-fluid` class to the `img`
-    // inside the lightbox. See https://github.com/imgix/imgix.js
-    // for more information.
-    includeImgixJSClass = _options$includeImgix === undefined ? false : _options$includeImgix;
+    var includeImgixJSClass = _options$includeImgix === undefined ? false : _options$includeImgix;
     var _options$injectBaseSt = options.injectBaseStyles;
-    var
-    // Add base styles to the page. See the "Theming"
-    // section of README.md for more information.
-    injectBaseStyles = _options$injectBaseSt === undefined ? true : _options$injectBaseSt;
+    var injectBaseStyles = _options$injectBaseSt === undefined ? true : _options$injectBaseSt;
     var _options$_gallery = options._gallery;
 
-    var
-    // Internal use only!
-    _gallery = _options$_gallery === undefined ? null : _options$_gallery;
+    var _gallery = _options$_gallery === undefined ? null : _options$_gallery;
 
     var _options$_arrowNaviga = options._arrowNavigation;
 
