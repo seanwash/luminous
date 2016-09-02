@@ -73,7 +73,7 @@ export default class Lightbox {
     addClasses(this.imgEl, this._buildClasses('img'));
     positionHelperEl.appendChild(this.imgEl);
 
-    this.captionEl = document.createElement('p');
+    this.captionEl = document.createElement('div');
     addClasses(this.captionEl, this._buildClasses('lightbox-caption'));
     positionHelperEl.appendChild(this.captionEl);
 

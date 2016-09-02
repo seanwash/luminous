@@ -156,7 +156,7 @@ var Lightbox = function () {
       (0, _dom.addClasses)(this.imgEl, this._buildClasses('img'));
       positionHelperEl.appendChild(this.imgEl);
 
-      this.captionEl = document.createElement('p');
+      this.captionEl = document.createElement('div');
       (0, _dom.addClasses)(this.captionEl, this._buildClasses('lightbox-caption'));
       positionHelperEl.appendChild(this.captionEl);
 
